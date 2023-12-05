@@ -1,0 +1,98 @@
+/* Footer */
+.footer {
+  background-color: $dark-gray;
+  padding-top: 1.5rem;
+
+  &__brand {
+    margin-bottom: 1rem;
+
+    &-logo {
+      display: block;
+      height: auto;
+      margin: 0 auto 1rem auto;
+      max-width: 250px;
+      width: 100%;
+
+      @include large {
+        margin: 0 0 1rem 0;
+      }
+
+      img {
+        display: block;
+        margin: 0 0 15px 0;
+        width: 100%;
+
+        @include large {
+          margin: 0 auto;
+        }
+      }
+    }
+
+    p {
+      color: $mid-light-gray;
+    }
+  }
+
+  &__info {
+    margin-left: auto;
+
+    &-title {
+      color: $brand-yellow;
+      font-family: $font-title;
+      font-size: 1.25em;
+      font-weight: $font-bold;
+      margin: 0 0 1rem 0;
+      text-align: center;
+      text-transform: uppercase;
+
+      @include large {
+        line-height: 3.125rem;
+        margin: 0 0 1rem 0;
+        text-align: left;
+      }
+    }
+
+    &-menu {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+
+      @include large {
+        text-align: left;
+      }
+
+      li {
+        color: $mid-light-gray;
+        line-height: 1.5rem;
+
+        + li {
+          margin-top: .5rem;
+        }
+
+        span {
+          font-weight: $font-bold;
+        }
+
+        a {
+          color: $brand-yellow;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    clear: both;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+
+    p {
+      color: $brand-yellow;
+      font-size: .8rem;
+      font-weight: $font-medium;
+      letter-spacing: 0.05em;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+  }
+}

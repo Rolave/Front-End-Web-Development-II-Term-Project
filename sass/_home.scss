@@ -1,0 +1,86 @@
+/* Home section */
+.home {
+  background-image: url("../img/home-bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+  }
+
+  &__title {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-shadow: 0 1px 5px rgba(black, .5);
+    
+    @include medium {
+        font-size: 5rem;
+    }
+  }
+
+  &__description {
+    color: white;
+  }
+
+  &__cta {
+    background-color: $brand-yellow;
+    border: none;
+    border-radius: .5rem;
+    color: black;
+    margin-bottom: 2.5rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+
+    &:focus, &:hover {
+      background-color: black;
+      color: $brand-yellow;
+    }
+  }
+
+  &__features {
+
+      &-item {
+        background-color: rgba(black, .5);
+        border: 1px solid $brand-yellow;
+        border-radius: .5rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        transition: all .3s ease-in-out;
+
+        @include large {
+          margin-bottom: 0;
+        }
+
+        &:focus, &:hover {
+          background-color: rgba(black, .75);
+          transform: translatey(-.25rem);
+        }
+
+        &__title {
+          color: $brand-yellow;
+            font-size: 1.5rem;
+            text-align: center;
+            
+            @include large {
+              font-size: 3rem;
+              text-align: left;
+            }
+        }
+
+        &__description {
+            color: white;
+            font-size: 1rem;
+            margin: 0;
+            text-align: center;
+
+            @include large {
+              text-align: left;
+            }
+        }
+    }
+  }
+}

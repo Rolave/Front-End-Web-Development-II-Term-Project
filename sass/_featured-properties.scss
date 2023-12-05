@@ -1,0 +1,145 @@
+.featured-properties {
+  background-color: $light-gray;
+  padding: 3rem 0;
+
+  &__item {
+    border: 1px solid $mid-light-gray;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+
+    @include large {
+      margin-bottom: 0;
+      min-height: 100%;
+    }
+
+    &-image {
+      position: relative;
+    }
+
+    &-bookmark {
+      background-color: rgba($brand-yellow, .75);
+      border: none;
+      color: white;
+      font-size: .75rem;
+      padding: .75rem 1rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: all .3s ease-in-out;
+
+      &:focus, &:hover {
+        background-color: $brand-yellow;
+      }
+
+      &--selected {
+        background-color: $green;
+      }
+    }
+
+    &-price {
+      background-color: rgba($brand-blue, .75);
+      bottom: 0;
+      color: white;
+      margin: 0;
+      padding: 1rem 1.5rem;
+      position: absolute;
+      right: 0;
+    }
+
+    .card-body {
+      margin: 0;
+      padding: 1rem;
+    }
+
+    .card-title {
+      background-color: white;
+      border-bottom: 1px solid $mid-light-gray;
+      color: $brand-blue;
+      margin: -1rem -1rem 1rem -1rem;
+      padding: .5rem 1rem;
+
+      &__address {
+        display: block;
+
+        i {
+          font-size: .8rem;
+          margin-right: .5rem;
+          position: relative;
+          top: -.15rem;
+        }
+
+        &-info {
+          color: $mid-gray;
+          display: block;
+          font-size: .8rem;
+          font-weight: $font-light;
+          padding-left: 1rem;
+        }
+      }
+    }
+
+    .card-list {
+      list-style-type: none;
+      margin: 0 0 1rem 0;
+      padding: 0;
+      text-align: center;
+      
+      li {
+        background-color: white;
+        border-radius: .25rem;
+        display: inline-block;
+        font-size: .8rem;
+        padding: .25rem;
+
+        i {
+          margin-right: .25rem;
+        }
+
+        + li {
+          margin-left: .5rem;
+        }
+      }
+    }
+
+    .card-button {
+      background-color: $dark-gray;
+      border: none;
+      border-radius: 0.25rem;
+      color: white;
+      display: inline-block;
+      text-decoration: none;
+      padding: .75rem 2rem;
+      margin: 0;
+      text-align: center;
+      text-transform: uppercase;
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+
+      &:focus,
+      &:hover {
+        background-color: $brand-blue;
+      }
+    }
+
+    &--main {
+      background-color: white;
+      
+      @include large {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      .card-title {
+        color: $brand-blue;
+        font-size: 1.75rem;
+        text-transform: uppercase;
+      }
+
+      .card-body {
+        padding: 2rem;
+      }
+    }
+  }
+}
