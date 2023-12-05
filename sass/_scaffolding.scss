@@ -1,0 +1,35 @@
+/* Default */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  height: 100%;
+}
+
+body {
+  background: $light-gray;
+  font-family: $font-text;
+  font-size: 14px;
+  font-weight: $font-regular;
+  color: $dark-gray;
+  min-height: 100%;
+}
+
+.main {
+  position: relative;
+}
+
+.section-title {
+  color: $brand-blue;
+  font-weight: $font-light;
+  margin-bottom: 3rem;
+  text-align: center;
+
+  &--light {
+    color: white;
+  }
+}
