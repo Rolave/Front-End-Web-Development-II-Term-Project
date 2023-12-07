@@ -1,0 +1,89 @@
+/* Agents */
+.agents {
+  position: relative;
+
+  &::before {
+    background-color: $brand-blue;
+    content: "";
+    display: block;
+    height: 50%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &__container {
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+  }
+
+  &__item {
+    background-color: white;
+    border: 1px solid $mid-light-gray;
+    border-radius: .5rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    text-align: center;
+
+    @include large {
+      margin-bottom: 0;
+    }
+
+    &-avatar {
+      border-radius: 50%;
+      margin: 0;
+      overflow: hidden;
+      margin: 2rem auto 0 auto;
+      max-width: 6rem;
+
+      @include large {
+        border-radius: 0;
+        margin: 0;
+        max-width: none;
+      }
+
+      img {
+        max-width: none;
+        width: 100%;
+      }
+    }
+
+    &-body {
+      padding: 1.5rem 2rem;
+    }
+
+    &-name {
+      font-weight: $font-bold;
+      margin: 0 0 .5rem 0;
+    }
+
+    &-position {
+      color: $mid-gray;
+      font-size: .75rem;
+      margin: 0 0 1rem 0;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: .8rem;
+    }
+
+    &-email {
+      color: $brand-yellow;
+      border: 1px solid $brand-yellow;
+      border-radius: .75rem;
+      display: inline-block;
+      font-weight: $font-regular;
+      letter-spacing: .05rem;
+      padding: .5rem 1rem;
+      text-decoration: none;
+      transition: all .3s ease-in-out;
+
+      &:focus,
+      &:hover {
+        background-color: $brand-yellow;
+        color: white;
+      }
+    }
+  }
+}
