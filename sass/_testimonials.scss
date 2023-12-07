@@ -1,0 +1,101 @@
+/* Testimonials */
+.testimonials {
+  background-color: white;
+
+  &__container {
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+  }
+
+  &__item {
+    border: 1px solid $mid-light-gray;
+    border-radius: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    
+    @include large {
+      margin-bottom: 0;
+      padding: 3rem;
+    }
+
+    &-quote {
+      font-size: .75rem;
+      line-height: 1.25rem;
+      text-align: center;
+      
+      @include large {
+        font-size: 1rem;
+        line-height: 1.75rem;
+        text-align: left;
+      }
+
+      &::after,
+      &::before {
+        color: $brand-yellow;
+        content: "\"";
+        font-size: 2rem;
+        font-weight: $font-bold;
+        line-height: 1rem;
+        vertical-align: middle;
+      }
+
+      &::after {
+        margin-left: .5rem;
+      }
+
+      &::before {
+        margin-right: .5rem;
+      }
+    }
+
+    &-name {
+      color: $dark-gray;
+      font-size: 1rem;
+      font-weight: $font-light;
+      text-align: center;
+      
+      @include large {
+        font-size: 1.5rem;
+        text-align: left;
+      }
+
+    }
+
+    &-city {
+      color: $mid-gray;
+      font-size: .5rem;
+      font-weight: $font-bold;
+      letter-spacing: .1rem;
+      margin: 0;
+      text-align: center;
+      text-transform: uppercase;
+
+      @include large {
+        font-size: .75rem;
+        text-align: left;
+      }
+    }
+  }
+
+  &__carousel {
+    padding: 0 6rem;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: $brand-blue;
+    border-radius: 50%;
+    height: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4rem;
+  }
+
+  .carousel-control-prev {
+    left: 1rem;
+  }
+
+  .carousel-control-next {
+    right: 1rem;
+  }
+}

@@ -33,3 +33,16 @@ body {
     color: white;
   }
 }
+
+.section-subtitle {
+  color: $mid-gray;
+  font-size: 1rem;
+  font-weight: $font-light;
+  margin: 0 auto 3rem auto;
+  max-width: 768px;
+  text-align: center;
+
+  &--light {
+    color: $light-gray;
+  }
+}
