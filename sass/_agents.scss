@@ -1,20 +1,21 @@
 /* Agents */
 .agents {
-  position: relative;
-
-  &::before {
-    background-color: $brand-blue;
-    content: "";
-    display: block;
-    height: 50%;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-  }
-
-  &__container {
+  
+  &__team {
+    position: relative;
     padding-bottom: 5rem;
     padding-top: 5rem;
+
+    &::before {
+      background-color: $brand-blue;
+      bottom: 50%;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
   }
 
   &__item {

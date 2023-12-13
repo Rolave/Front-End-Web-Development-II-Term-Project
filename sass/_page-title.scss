@@ -1,0 +1,81 @@
+.page-title {
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5rem 0;
+  position: relative;
+
+  @include large {
+    padding: 8rem 0;
+  }
+
+  &__heading {
+    color: $brand-blue;
+    font-weight: $font-medium;
+    margin: 0;
+    text-align: center;
+    text-shadow: 0 1px 5px black;
+
+    + * {
+      margin-top: 3rem !important;
+    }
+
+    &--light {
+      color: white;
+    }
+  }
+
+  &__sub-heading {
+    color: $mid-gray;
+    font-size: 1rem;
+    font-weight: $font-light;
+    margin: 0 auto;
+    max-width: 768px;
+    text-align: center;
+  
+    &--light {
+      color: $light-gray;
+    }
+  }
+
+  &--dark {
+  
+    &::before {
+      background-color: rgba($brand-blue, .5);
+      mix-blend-mode: darken;
+      bottom: 0;
+      content: '';
+      height: 100%;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 0;
+    }
+
+    & * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-title__heading {
+      color: white;
+    }
+
+    .page-title__sub-heading {
+      color: white;
+    }
+  }
+
+  &--about-us {
+    background-image: url('../img/about-us-bg.jpg');
+  }
+
+  &--agents {
+    background-image: url('../img/agents-bg.jpg');
+  }
+
+  &--contact {
+    background-image: url('../img/contact-bg.jpg');
+  }
+}
