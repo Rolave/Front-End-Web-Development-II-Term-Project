@@ -102,28 +102,7 @@
 
     &__form {
       position: relative;
-  
-      &-loader {
-        background-color: rgba(white,.75);
-        bottom: 0;
-        display: none;
-        font-size: 2.5rem;
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-  
-        &--loading {
-          align-items: center;
-          display: flex;
-          justify-content: center;
-        }
-  
-        i {
-          color: $brand-yellow;
-        }
-      }
-  
+    
       &__inputs {
         margin: 0 -15px 15px -15px;
         @include clearfix;

@@ -1,0 +1,189 @@
+/* Login */
+.login, .sign-up {
+  background-color: $brand-blue;
+  padding: 2.5rem 0;
+
+  @include large {
+    padding: 5rem 0;
+  }
+
+  &__form {
+    background-color: white;
+    padding: 2.5rem;
+    position: relative;
+    
+    @include large {
+      padding: 5rem;
+    }
+
+    &__title {
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    &__inputs {
+
+      + * {
+        margin-top: 1rem;
+      }
+
+      &-input {
+        overflow: hidden;
+        padding: 0;
+
+        input {
+          background-color: white;
+          border: 1px solid $mid-gray;
+          color: $dark-gray;
+          font-size: 1em;
+          font-weight: $font-medium;
+          line-height: 30px;
+          outline: none;
+          padding: 10px 15px;
+          transition: all .25s ease-in-out;
+          width: 100%;
+
+          &.has-error {
+            border-color: rgba($red,.5);
+          }
+
+          &::-webkit-input-placeholder {
+            color: $mid-gray;
+          }
+
+          &::-moz-placeholder {
+            color: $mid-gray;
+          }
+
+          &:-ms-placeholder {
+            color: $mid-gray;
+          }
+
+          &:-moz-placeholder {
+            color: $mid-gray;
+          }
+
+          &:focus {
+            border-color: $green;
+          }
+
+          &:disabled {
+            background-color: $mid-light-gray;
+            color: $mid-gray;
+          }
+        }
+
+        span {
+          background-color: $red;
+          color: white;
+          display: block;
+          font-size: .6em;
+          font-weight: $font-bold;
+          padding: 2px 5px;
+          text-transform: uppercase;
+        }
+      }
+
+      &-checkbox {
+        
+        label {
+          cursor: pointer;
+          display: flex;
+          padding: .25rem;
+          transition: all .3s ease-in-out;
+
+          &:focus,
+          &:hover {
+            background-color: $mid-light-gray;
+          }
+
+          span {
+            display: block;
+            flex: 1;
+            margin-left: .5rem;
+          }
+        }
+      }
+    }
+
+    &__message {
+
+      &-textarea {
+        margin-bottom: 20px;
+
+        textarea {
+          background-color: white;
+          border: 1px solid $mid-gray;
+          color: $dark-gray;
+          display: block;
+          font-size: 1em;
+          font-weight: $font-medium;
+          margin: 0;
+          outline: none;
+          padding: 15px;
+          resize: none;
+          transition: all .25s ease-in-out;
+          width: 100%;
+
+          &.has-error {
+            border-color: rgba($red,.5);
+          }
+
+          &::-webkit-input-placeholder {
+            color: $mid-gray;
+          }
+
+          &::-moz-placeholder {
+            color: $mid-gray;
+          }
+
+          &:-ms-placeholder {
+            color: $mid-gray;
+          }
+
+          &:-moz-placeholder {
+            color: $mid-gray;
+          }
+
+          &:focus {
+            border-color: $green;
+          }
+
+          &:disabled {
+            background-color: $mid-light-gray;
+            color: $mid-gray;
+          }
+
+        }
+
+        span {
+          background-color: $red;
+          color: white;
+          display: block;
+          font-size: .6em;
+          font-weight: $font-bold;
+          padding: 2px 5px;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    &__button {
+      background-color: $green;
+      border: none;
+      color: white;
+      font-size: 1.25em;
+      font-weight: $font-medium;
+      line-height: 60px;
+      outline: none;
+      text-transform: uppercase;
+      transition: all .25s ease-in-out;
+      width: 100%;
+
+      &:hover {
+        color: white;
+        background-color: $dark-gray;
+      }
+    }
+  }
+}

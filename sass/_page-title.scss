@@ -42,7 +42,7 @@
   &--dark {
   
     &::before {
-      background-color: rgba($brand-blue, .5);
+      background-image: linear-gradient(to right, rgba($brand-yellow, .5), rgba($brand-blue, .5));
       mix-blend-mode: darken;
       bottom: 0;
       content: '';

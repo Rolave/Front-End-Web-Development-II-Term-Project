@@ -2,6 +2,11 @@
   background-color: $light-gray;
   padding: 3rem 0;
 
+  &__title {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
   &__item {
     border: 1px solid $mid-light-gray;
     border-radius: 0.5rem;
