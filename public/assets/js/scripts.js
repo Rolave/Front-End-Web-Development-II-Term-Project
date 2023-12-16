@@ -346,17 +346,15 @@ if (contactForm) {
       removeErrorMessage(element);
     });
 
-    if (requiredInputsValues.every(isNullOrEmptyString)) {
-      requiredInputs.forEach(function (element) {
-        addErrorMessage(element, REQUIRED_FIELD_MESSAGE);
-      });
-      return;
-    }
-
     if (requiredInputsValues.some(isNullOrEmptyString)) {
       requiredInputs.forEach(function (element) {
-        addErrorMessage(element, REQUIRED_FIELD_MESSAGE);
+        if (element.value == '') {
+          addErrorMessage(element, REQUIRED_FIELD_MESSAGE);
+        } else if (element == emailInput && !isValidEmail(emailInputValue)) {
+          addErrorMessage(emailInput, INVALID_EMAIL_MESSAGE);
+        }
       });
+      return;
     }
 
     if (!isValidEmail(emailInputValue)) {
@@ -370,6 +368,8 @@ if (contactForm) {
         <div class="alert alert-success mt-4" role="alert">
           ${message} <a href="./index.html" class="alert-link">Go back to our main page.</a>
         </div>`;
+      resetInputsValues(requiredInputs);
+      removeFormAlertMessage(submitMessageButton);
       addFormAlertMessage(submitMessageButton, successSendedMessageAlert);
     }
   });

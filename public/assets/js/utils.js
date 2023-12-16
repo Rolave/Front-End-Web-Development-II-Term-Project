@@ -27,10 +27,8 @@ const isValidEmail = function (email) {
   return regex.test(email);
 };
 const addErrorMessage = function (element, message) {
-  if (element.value === '') {
-    element.classList.add('has-error');
-    element.insertAdjacentHTML('afterend', `<span>${message}</span>`);
-  }
+  element.classList.add('has-error');
+  element.insertAdjacentHTML('afterend', `<span>${message}</span>`);
 };
 const removeErrorMessage = function (element) {
   const inputErrorMessage = element.nextSibling;
