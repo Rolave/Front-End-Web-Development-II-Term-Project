@@ -46,27 +46,30 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="./index.html"
+                >Home</a
+              >
               <a class="nav-link" href="./about-us.html">About us</a>
-              <a class="nav-link" href="#">Properties</a>
+              <a class="nav-link" href="./properties.html">Properties</a>
               <a class="nav-link" href="./agents.html">Agents</a>
+              <a class="nav-link" href="./contact.html">Contact</a>
             </div>
-          </div>
-          <div id="header-login" class="header__login">
-            <ul class="header__login-list">
-              <li>
-                <a href="./login.html">
-                  <i class="fa-regular fa-user"></i>
-                  <span>Login</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-sign-in" aria-hidden="true"></i>
-                  <span>Sign up</span>
-                </a>
-              </li>
-            </ul>
+            <div id="header-login" class="header__login">
+              <ul class="header__login-list">
+                <li>
+                  <a href="./login.html">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Login</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="./sign-up.html">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                    <span>Sign up</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
@@ -84,47 +87,73 @@
           </div>
         </div>
         <!-- end .page-title -->
-        <div class="container">
-          <h3 class="section-title">About us</h3>
-          <div class="row">
-            <div class="col-lg-4">
-              <h4>We help in your search for the dream home</h4>
-              <p>Turingam is a leading real estate company based in Toronto, Canada. Our mission is to provide exceptional service and expertise in the real estate market, helping our clients find their perfect home or investment property. With a focus on transparency and integrity, we strive to build long-term relationships with our clients and exceed their expectations. Our team of experienced professionals is dedicated to staying ahead of the curve in a constantly evolving market, ensuring that our clients receive the best possible advice and guidance. Whether you are buying, selling, or investing, Turingam is your trusted partner in real estate.</p>
-            </div>
-            <div class="col-lg-6 ms-auto">
-              <img class="img-fluid" src="./assets/img/about-us.jpg" alt="About us">
+        <div class="about-us__main">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 col-xl-4">
+                <div class="about-us__main-info">
+                  <h4>We help in your search for the dream home</h4>
+                  <p>
+                    Turingam is a leading real estate company based in <strong>Toronto,
+                    Canada.</strong> Our mission is to provide exceptional service and
+                    expertise in the real estate market, helping our clients
+                    find their perfect home or investment property. With a focus
+                    on transparency and integrity, we strive to build long-term
+                    relationships with our clients and exceed their
+                    expectations. Our team of experienced professionals is
+                    dedicated to staying ahead of the curve in a constantly
+                    evolving market, ensuring that our clients receive the best
+                    possible advice and guidance. Whether you are buying,
+                    selling, or investing, Turingam is your trusted partner in
+                    real estate.
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-6 ms-auto">
+                <div class="about-us__main-img">
+                <img
+                  class="img-fluid"
+                  src="./assets/img/about-us.jpg"
+                  alt="About us"
+                />
+              </div>
+              </div>
             </div>
           </div>
-          <div class="about__history">
-            <div class="about__history-item">
+        </div>
+        <!-- end .about-us__main -->
+        <div class="about-us__history">
+          <div class="container about-us__history-items">
+            <div class="about-us__history-item">
               <h4>Our values</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-                ab, quia, quaerat quasi suscipit, autem ullam voluptates sit modi
-                cumque nulla. Facilis quibusdam omnis quaerat nesciunt, impedit
-                aliquid possimus doloremque?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloribus ab, quia, quaerat quasi suscipit, autem ullam
+                voluptates sit modi cumque nulla. Facilis quibusdam omnis
+                quaerat nesciunt, impedit aliquid possimus doloremque?
               </p>
             </div>
-            <div class="about__history-item">
+            <div class="about-us__history-item">
               <h4>Our goals</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-                ab, quia, quaerat quasi suscipit, autem ullam voluptates sit modi
-                cumque nulla. Facilis quibusdam omnis quaerat nesciunt, impedit
-                aliquid possimus doloremque?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloribus ab, quia, quaerat quasi suscipit, autem ullam
+                voluptates sit modi cumque nulla. Facilis quibusdam omnis
+                quaerat nesciunt, impedit aliquid possimus doloremque?
               </p>
             </div>
-            <div class="about__history-item about__history-item--highlighted">
+            <div class="about-us__history-item about__history-item--highlighted">
               <h4>Our history</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-                ab, quia, quaerat quasi suscipit, autem ullam voluptates sit modi
-                cumque nulla. Facilis quibusdam omnis quaerat nesciunt, impedit
-                aliquid possimus doloremque?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloribus ab, quia, quaerat quasi suscipit, autem ullam
+                voluptates sit modi cumque nulla. Facilis quibusdam omnis
+                quaerat nesciunt, impedit aliquid possimus doloremque?
               </p>
             </div>
           </div>
         </div>
+        <!-- end .about-us__history -->
       </section>
       <!-- end .home -->
     </main>
@@ -133,16 +162,36 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 footer__brand">
-            <img class="footer__brand-logo" src="./assets/img/turingam-logo-footer.svg" alt="Turingam Real Estate">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit tempore consequuntur dignissimos officia magnam vitae, ullam illum nisi perferendis velit nostrum, necessitatibus tenetur quod impedit laborum provident. Dolor, exercitationem magni.</p>
+            <img
+              class="footer__brand-logo"
+              src="./assets/img/turingam-logo-footer.svg"
+              alt="Turingam Real Estate"
+            />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              tempore consequuntur dignissimos officia magnam vitae, ullam illum
+              nisi perferendis velit nostrum, necessitatibus tenetur quod
+              impedit laborum provident. Dolor, exercitationem magni.
+            </p>
           </div>
           <div class="col-lg-3 footer__info">
             <h3 class="footer__info-title">Contact us</h3>
             <ul class="footer__info-menu">
-              <li><span>Address:</span>  265 Yorkland Blvd #400, North York, ON M2J 1S5</li>
-              <li><span>Phone:</span> <a href="tel:+14164852098">+1 (416) 485-2098</a></li>
-              <li><span>E-mail:</span> <a href="mailto:contact@turingam.ca">contact@turingam.ca</a></li>
-              <li><span>Business hours:</span> Monday to Friday from 9 AM to 5 PM</li>
+              <li>
+                <span>Address:</span> 265 Yorkland Blvd #400, North York, ON M2J
+                1S5
+              </li>
+              <li>
+                <span>Phone:</span>
+                <a href="tel:+14164852098">+1 (416) 485-2098</a>
+              </li>
+              <li>
+                <span>E-mail:</span>
+                <a href="mailto:contact@turingam.ca">contact@turingam.ca</a>
+              </li>
+              <li>
+                <span>Business hours:</span> Monday to Friday from 9 AM to 5 PM
+              </li>
             </ul>
           </div>
         </div>

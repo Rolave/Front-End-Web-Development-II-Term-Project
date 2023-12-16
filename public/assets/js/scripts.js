@@ -1,12 +1,12 @@
 // Header feature
 const headerLogin = document.getElementById('header-login');
+const updateUserMenu = function (menu) {
+  headerLogin.innerHTML = '';
+  const menuHTML = convertStringToHTML(menu);
+  headerLogin.appendChild(menuHTML);
+};
 if (headerLogin) {
   const isUserLogged = !!getSessionStorageKey(LOGIN_STORAGE_KEY);
-  const updateUserMenu = function (menu) {
-    headerLogin.innerHTML = '';
-    const menuHTML = convertStringToHTML(menu);
-    headerLogin.appendChild(menuHTML);
-  };
 
   if (isUserLogged) {
     updateUserMenu(LOGGED_MENU);
@@ -163,7 +163,7 @@ if (signUpForm) {
     } else {
       resetInputsValues(requiredSignUpInputs);
       const successUserCreateAlert = `
-        <div class="alert alert-danger mt-4" role="alert">
+        <div class="alert alert-success mt-4" role="alert">
           User ${usernameValue} successfuly created. Please check your username and password. <a href="./index.html" class="alert-link">Go back to our main page.</a>
         </div>
       `;
@@ -178,6 +178,131 @@ if (signUpForm) {
   });
 }
 
+// Properties feature
+const propertiesFilterForm = document.getElementById('properties-filter-form');
+const propertiesContainer = document.getElementById('properties-container');
+if (propertiesFilterForm) {
+  const locationSelect = propertiesFilterForm.querySelector('#location');
+  const typeSelect = propertiesFilterForm.querySelector('#type');
+
+  propertiesFilterForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const locationSelectValue = locationSelect.value;
+    const typeSelectValue = typeSelect.value;
+    const properties = await fakeApiCall(FAKE_PROPERTIES_ENDPOINT);
+    const createPropertyItem = function (property) {
+      return `
+        <div class="col-lg-4 mb-4">
+          <div class="properties__item">
+            <div class="properties__item-image">
+              <span class="properties__item-category">${
+                property.category
+              }</span>
+              <button class="properties__item-bookmark" type="button" data-id="${
+                property.id
+              }">
+                <i class="fa-solid fa-bookmark"></i>
+              </button>
+              <img src="${
+                property.images.main || './assets/img/house-default.jpg'
+              }" class="card-img-top" alt="${property.address}" />
+              <h6 class="properties__item-price">$${property.price}</h6>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">
+                <span class="card-title__address">
+                  <i class="fa-solid fa-location-dot"></i>
+                  ${property.address}
+                </span>
+                <span class="card-title__address-info">
+                  ${property.city} ${property.province}, ${property.postalCode}
+                </span>
+              </h5>
+              <ul class="card-list">
+                <li>
+                  <i class="fa-solid fa-bed"></i><span>${
+                    property.bedrooms
+                  } Rooms</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-shower"></i><span>${
+                    property.bathrooms
+                  } Baths</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-car"></i><span>${
+                    property.garage
+                  } Garage</span>
+                </li>
+              </ul>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Illo soluta eos.
+              </p>
+              <a href="./property.html" class="card-button">View more</a>
+            </div>
+          </div>
+        </div>
+      `;
+    };
+    propertiesContainer.innerHTML = '';
+    const getFilteredProperties = function (propertiesList, location, type) {
+      return propertiesList.filter(function (property) {
+        return (
+          (location == PROPERTIES_SELECT_DEFAULT ||
+            property.city == location) &&
+          (type == PROPERTIES_SELECT_DEFAULT || property.category == type)
+        );
+      });
+    };
+    const filteredProperties = getFilteredProperties(
+      properties,
+      locationSelectValue,
+      typeSelectValue
+    );
+    if (filteredProperties.length > 0) {
+      filteredProperties.forEach(function (property) {
+        const propertyItem = createPropertyItem(property);
+        propertiesContainer.insertAdjacentHTML('afterbegin', propertyItem);
+      });
+    }
+  });
+
+  propertiesContainer.addEventListener('click', function (e) {
+    e.preventDefault();
+    const viewMoreButton = e.target.closest('.card-button');
+    if (e.target == viewMoreButton) {
+      parent.location = viewMoreButton.href;
+      return;
+    }
+    const bookmark = e.target.closest('.properties__item-bookmark');
+    const bookmarkId = bookmark.dataset.id;
+    const isBookmarked = bookmark.classList.contains(
+      'properties__item-bookmark--selected'
+    );
+    const bookmarkedItems =
+      JSON.parse(getSessionStorageKey(BOOKMARKS_USER_KEY)) || [];
+    if (isBookmarked) {
+      const filteredBookmarks = bookmarkedItems.filter(function (bookmark) {
+        return bookmark.id != bookmarkId;
+      });
+      bookmark.classList.remove('properties__item-bookmark--selected');
+      bookmark.blur();
+      setSessionStorageKey(
+        BOOKMARKS_USER_KEY,
+        JSON.stringify([...filteredBookmarks])
+      );
+    } else {
+      bookmark.classList.add('properties__item-bookmark--selected');
+      bookmark.blur();
+      setSessionStorageKey(
+        BOOKMARKS_USER_KEY,
+        JSON.stringify([...bookmarkedItems, { id: bookmarkId }])
+      );
+    }
+  });
+}
+
 // Contact feature
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
@@ -186,6 +311,7 @@ if (contactForm) {
   const emailInput = contactForm.querySelector('#email');
   const phoneInput = contactForm.querySelector('#phone');
   const messageInput = contactForm.querySelector('#message');
+  const submitMessageButton = contactForm.querySelector('button');
   const requiredInputs = Array.from([
     nameInput,
     lastnameInput,
@@ -194,7 +320,7 @@ if (contactForm) {
     messageInput,
   ]);
 
-  contactForm.addEventListener('submit', function (e) {
+  contactForm.addEventListener('submit', async function (e) {
     e.preventDefault();
 
     const nameInputValue = nameInput.value;
@@ -210,10 +336,6 @@ if (contactForm) {
 
     requiredInputs.forEach(function (element) {
       removeErrorMessage(element);
-    });
-
-    document.querySelectorAll('.msg-response').forEach(function (element) {
-      element.style.display = 'none';
     });
 
     if (requiredInputsValues.every(isNullOrEmptyString)) {
@@ -234,17 +356,14 @@ if (contactForm) {
       return;
     }
 
-    const sendEmail = function () {
-      const body = {
-        name: nameInputValue,
-        lastname: lastnameInputValue,
-        email: emailInputValue,
-        message: messageInputValue,
-      };
-      fakeApiCall(FAKE_EMAIL_ENDPOINT, DEFAULT_HEADERS, body);
-    };
-
-    sendEmail();
+    const { code, message } = await fakeApiCall(FAKE_EMAIL_ENDPOINT);
+    if (code == SUCCESS_CODE) {
+      const successSendedMessageAlert = `
+        <div class="alert alert-success mt-4" role="alert">
+          ${message} <a href="./index.html" class="alert-link">Go back to our main page.</a>
+        </div>`;
+      addFormAlertMessage(submitMessageButton, successSendedMessageAlert);
+    }
   });
 
   requiredInputs.forEach(function (element) {

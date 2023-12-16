@@ -1,0 +1,63 @@
+/* Property */
+.property {
+  background-color: white;
+
+  &__main {
+    padding: 3rem 0;
+
+    @include large {
+      padding: 0;
+    }
+
+    &-info,
+    &-details {
+      min-height: 100%;
+      @include large {
+        padding: 3rem;
+      }
+    }
+
+    &-info {
+      margin: 0 0 3rem 0;
+
+      @include large {
+        margin: 0;
+      }
+
+      h4 {
+        color: black;
+        font-weight: $font-medium;
+        margin: 0 0 2rem 0;
+      }
+    }
+
+    &-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      img {
+        margin-bottom: 2rem;
+      }
+
+      table {
+        border: 1px solid $brand-yellow;
+        border-collapse: collapse;
+        
+        tr {
+          border: 1px solid $brand-yellow;
+          
+          td {
+            border: 1px solid $brand-yellow;
+            padding: .5rem;
+
+            &[scope=row] {
+              background-color: $light-gray;
+              font-weight: $font-medium;
+            }
+          }
+        }
+      }
+    }
+  }
+}
