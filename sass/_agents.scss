@@ -1,15 +1,20 @@
 /* Agents */
 .agents {
-  
   &__team {
     position: relative;
-    padding-bottom: 5rem;
-    padding-top: 5rem;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+
+
+    @include large {
+      padding-bottom: 5rem;
+      padding-top: 5rem;
+    }
 
     &::before {
       background-color: $brand-blue;
       bottom: 50%;
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       top: 0;
@@ -21,7 +26,7 @@
   &__item {
     background-color: white;
     border: 1px solid $mid-light-gray;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     margin-bottom: 2rem;
     overflow: hidden;
     text-align: center;
@@ -55,30 +60,30 @@
 
     &-name {
       font-weight: $font-bold;
-      margin: 0 0 .5rem 0;
+      margin: 0 0 0.5rem 0;
     }
 
     &-position {
       color: $mid-gray;
-      font-size: .75rem;
+      font-size: 0.75rem;
       margin: 0 0 1rem 0;
       text-transform: uppercase;
     }
 
     p {
-      font-size: .8rem;
+      font-size: 0.8rem;
     }
 
     &-email {
-      color: $brand-yellow;
+      color: $mid-gray;
       border: 1px solid $brand-yellow;
-      border-radius: .75rem;
+      border-radius: 0.75rem;
       display: inline-block;
-      font-weight: $font-regular;
-      letter-spacing: .05rem;
-      padding: .5rem 1rem;
+      font-weight: $font-medium;
+      letter-spacing: 0.05rem;
+      padding: 0.5rem 1rem;
       text-decoration: none;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
 
       &:focus,
       &:hover {
