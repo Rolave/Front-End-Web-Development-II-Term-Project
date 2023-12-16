@@ -1,0 +1,97 @@
+/* Page title */
+.page-title {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5rem 0;
+  position: relative;
+  text-align: center;
+
+  @include large {
+    padding: 8rem 0;
+  }
+
+  &__heading {
+    color: $brand-blue;
+    font-weight: $font-medium;
+    margin: 0;
+    text-align: center;
+    text-shadow: 0 1px 5px black;
+
+    + * {
+      margin-top: 3rem !important;
+    }
+
+    &--light {
+      color: white;
+    }
+  }
+
+  &__sub-heading {
+    background-color: rgba(black, .45);
+    border-radius: .5rem;
+    color: white;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: $font-medium;
+    margin: 0 auto;
+    max-width: 768px;
+    padding: 1rem;
+    text-align: center;
+  
+    &--light {
+      background-color: transparent;
+      color: $light-gray;
+      padding: 0;
+    }
+  }
+
+  &--dark {
+  
+    &::before {
+      background-image: linear-gradient(to right, rgba($brand-yellow, .5), rgba($brand-blue, .5));
+      mix-blend-mode: darken;
+      bottom: 0;
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 0;
+    }
+
+    & * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-title__heading {
+      color: white;
+    }
+
+    .page-title__sub-heading {
+      color: white;
+    }
+  }
+
+  &--about-us {
+    background-image: url('../img/about-us-bg.jpg');
+  }
+
+  &--agents {
+    background-image: url('../img/agents-bg.jpg');
+  }
+
+  &--properties {
+    background-image: url('../img/properties-bg.jpg');
+  }
+
+  &--property {
+    background-image: url('../img/property-bg.jpg');
+  }
+
+  &--contact {
+    background-image: url('../img/contact-bg.jpg');
+  }
+}

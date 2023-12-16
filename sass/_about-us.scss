@@ -1,0 +1,75 @@
+/* About us */
+.about-us {
+  background-color: white;
+
+  &__main {
+    background-color: $brand-yellow;
+    padding: 3rem 0;
+
+    @include large {
+      padding: 0;
+    }
+
+    &-info,
+    &-img {
+      min-height: 100%;
+      @include large {
+        padding: 3rem;
+      }
+    }
+
+    &-info {
+      margin: 0 0 3rem 0;
+
+      @include large {
+        margin: 0;
+      }
+
+      h4 {
+        color: black;
+        font-weight: $font-medium;
+        margin: 0 0 2rem 0;
+      }
+    }
+
+    &-img {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__history {
+    background-color: $light-gray;
+
+    &-items {
+      @include large {
+        display: flex;
+      }
+    }
+
+
+    &-item {
+      padding: 1.5rem 0;
+
+      + div {
+        border-top: 1px solid $mid-gray;
+
+        @include large {
+          border: none;
+        }
+      }
+
+      @include large {
+        padding: 3rem;
+      }
+
+      h4 {
+        color: $brand-blue;
+        font-size: 1rem;
+        margin: 0 0 1.5rem 0;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

@@ -1,9 +1,0 @@
-{
-    "id": "12345",
-    "username": "john_doe",
-    "name": "John",
-    "lastname": "Doe",
-    "email": "john_doe@example.com",
-    "phone": "123-456-7890",
-    "wishlist": []
-}

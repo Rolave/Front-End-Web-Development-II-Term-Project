@@ -1,0 +1,173 @@
+[
+  {
+    "id": 1,
+    "images": {
+			"main": "./assets/img/house-01.jpg",
+			"thumbnail": "./assets/img/house-01.jpg"
+		},
+    "address": "45 Maple Lane",
+    "city": "Toronto",
+    "province": "Ontario",
+    "postalCode": "M4B 1B2",
+    "yearBuilt": 2010,
+    "price": 1200000,
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "garage": 2,
+    "size": 3000,
+    "category": "house",
+    "transactionType": "For sale"
+  },
+  {
+    "id": 2,
+    "images": {
+			"main": "./assets/img/apartment-01.jpg",
+			"thumbnail": "./assets/img/apartment-01.jpg"
+		},
+    "address": "101 Ocean View Rd, Apt 305",
+    "city": "Vancouver",
+    "province": "British Columbia",
+    "postalCode": "V6Z 2T1",
+    "yearBuilt": 2015,
+    "price": 850000,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "garage": "Underground parking",
+    "size": 1100,
+    "category": "apartment",
+    "transactionType": "For sale"
+  },
+  {
+    "id": 3,
+    "images": {
+			"main": "./assets/img/townhouse-01.jpg",
+			"thumbnail": "./assets/img/townhouse-01.jpg"
+		},
+    "address": "402 Prairie Circle",
+    "city": "Calgary",
+    "province": "Alberta",
+    "postalCode": "T2P 2G8",
+    "yearBuilt": 2008,
+    "price": 650000,
+    "bedrooms": 3,
+    "bathrooms": 2.5,
+    "garage": 1,
+    "size": 2200,
+    "category": "townhouse",
+    "transactionType": "For sale"
+  },
+  {
+    "id": 4,
+    "images": {
+			"main": "./assets/img/apartment-02.jpg",
+			"thumbnail": "./assets/img/apartment-02.jpg"
+		},
+    "address": "55 Rue de la Montagne, Apt 2102",
+    "city": "Montreal",
+    "province": "Quebec",
+    "postalCode": "H3C 0C1",
+    "yearBuilt": 2020,
+    "price": 780000,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "garage": "Underground parking",
+    "size": 1200,
+    "category": "apartment",
+    "transactionType": "For sale"
+  },
+  {
+    "id": 5,
+    "images": {
+			"main": "./assets/img/townhouse-02.jpg",
+			"thumbnail": "./assets/img/townhouse-02.jpg"
+		},
+    "address": "789 Country Road",
+    "city": "Saskatoon",
+    "province": "Saskatchewan",
+    "postalCode": "S7K 3J8",
+    "yearBuilt": 1985,
+    "price": 400000,
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "garage": 2,
+    "size": 2500,
+    "category": "townhouse",
+    "transactionType": "For sale"
+  },
+  {
+    "id": 6,
+    "images": {
+			"main": "./assets/img/house-02.jpg",
+			"thumbnail": "./assets/img/house-02.jpg"
+		},
+    "address": "156 River Valley Rd",
+    "city": "Edmonton",
+    "province": "Alberta",
+    "postalCode": "T5J 2G7",
+    "yearBuilt": 2019,
+    "price": 950000,
+    "bedrooms": 5,
+    "bathrooms": 3,
+    "garage": 2,
+    "size": 3200,
+    "category": "house",
+    "transactionType": "For sale"
+  },
+  {
+    "id": 7,
+    "images": {
+			"main": "./assets/img/apartment-03.jpg",
+			"thumbnail": "./assets/img/apartment-03.jpg"
+		},
+    "address": "30 Lake Shore Blvd",
+    "city": "Toronto",
+    "province": "Ontario",
+    "postalCode": "M5J 2X5",
+    "yearBuilt": 2012,
+    "price": 1300000,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "garage": "Underground parking",
+    "size": 2100,
+    "category": "apartment",
+    "transactionType": "For sale"
+  },
+  {
+    "id": 8,
+    "images": {
+			"main": "./assets/img/apartment-04.jpg",
+			"thumbnail": "./assets/img/apartment-04.jpg"
+		},
+    "address": "88 Harbour Street, Unit 1901",
+    "city": "Vancouver",
+    "province": "British Columbia",
+    "postalCode": "V6C 0C1",
+    "yearBuilt": 2018,
+    "price": 1100000,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "garage": "Underground parking",
+    "size": 1500,
+    "category": "apartment",
+    "transactionType": "For sale"
+  },
+  {
+    "id": 9,
+    "images": {
+			"main": "./assets/img/townhouse-03.jpg",
+			"thumbnail": "./assets/img/townhouse-03.jpg"
+		},
+    "address": "500 Midtown Avenue SW",
+    "city": "Calgary",
+    "province": "Alberta",
+    "postalCode": "T2S 2T9",
+    "yearBuilt": 2005,
+    "price": 700000,
+    "bedrooms": 4,
+    "bathrooms": 2.5,
+    "garage": 1,
+    "size": 2300,
+    "category": "townhouse",
+    "transactionType": "For sale"
+  }
+]

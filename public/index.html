@@ -47,26 +47,27 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-              <a class="nav-link" href="#">About us</a>
-              <a class="nav-link" href="#">Properties</a>
+              <a class="nav-link" href="./about-us.html">About us</a>
+              <a class="nav-link" href="./properties.html">Properties</a>
               <a class="nav-link" href="./agents.html">Agents</a>
+              <a class="nav-link" href="./contact.html">Contact</a>
             </div>
-          </div>
-          <div id="header-login" class="header__login">
-            <ul class="header__login-list">
-              <li>
-                <a id="login" href="#">
-                  <i class="fa-regular fa-user"></i>
-                  <span>Login</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-sign-in" aria-hidden="true"></i>
-                  <span>Sign up</span>
-                </a>
-              </li>
-            </ul>
+            <div id="header-login" class="header__login">
+              <ul class="header__login-list">
+                <li>
+                  <a href="./login.html">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Login</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="./sign-up.html">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                    <span>Sign up</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
@@ -84,9 +85,9 @@
                 quia officiis cupiditate facilis facere voluptas eaque nam,
                 doloremque eligendi dicta laboriosam.
               </p>
-              <button class="home__cta">
+              <a class="home__cta" href="./agents.html">
                 Book an apointment with our agents
-              </button>
+              </a>
               <div class="row home__features">
                 <div class="col-lg-4">
                   <div class="home__features-item">
@@ -120,7 +121,7 @@
       <!-- end .home -->
       <section class="featured-properties" id="featured-properties">
         <div class="container">
-          <h3 class="section-title">Featured properties</h3>
+          <h3 class="featured-properties__title">Featured properties</h3>
           <div class="row">
             <div class="col-lg-3">
               <div
@@ -132,7 +133,7 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Illo soluta eos.
                   </p>
-                  <a href="#" class="card-button">Explore all</a>
+                  <a href="./properties.html" class="card-button">Explore all</a>
                 </div>
               </div>
             </div>
@@ -173,7 +174,7 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Illo soluta eos.
                   </p>
-                  <a href="#" class="card-button">View more</a>
+                  <a href="./property.html" class="card-button">View more</a>
                 </div>
               </div>
             </div>
@@ -214,7 +215,7 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Illo soluta eos.
                   </p>
-                  <a href="#" class="card-button">View more</a>
+                  <a href="./property.html" class="card-button">View more</a>
                 </div>
               </div>
             </div>
@@ -255,7 +256,7 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Illo soluta eos.
                   </p>
-                  <a href="#" class="card-button">View more</a>
+                  <a href="./property.html" class="card-button">View more</a>
                 </div>
               </div>
             </div>
@@ -265,7 +266,7 @@
       <!-- end .featured-properties -->
       <section class="services">
         <div class="container">
-          <h3 class="section-title section-title--light">Our services</h3>
+          <h3 class="services__title">Our services</h3>
           <div class="row">
             <div class="col-lg-4">
               <div class="services__item">
@@ -340,6 +341,9 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/constants.js"></script>
+    <script src="./assets/js/api.js"></script>
+    <script src="./assets/js/utils.js"></script>
     <script src="./assets/js/scripts.js"></script>
   </body>
 </html>

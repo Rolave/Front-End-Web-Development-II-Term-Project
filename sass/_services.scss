@@ -1,6 +1,13 @@
+/* Services */
 .services {
   background-color: $brand-blue;
   padding: 3rem 0;
+
+  &__title {
+    color: white;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
 
   &__item {
     background-color: white;

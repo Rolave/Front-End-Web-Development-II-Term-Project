@@ -1,0 +1,281 @@
+/* Contact */
+.contact {
+
+  &__info {
+    padding: 2rem 0;
+    position: relative;
+
+    @include large {
+      padding: 0;
+    }
+
+    &::before,
+    &::after {
+      bottom: 0;
+      position: absolute;
+      top: 0;
+      z-index: -1;
+
+      @include large {
+        content: '';
+      }
+    }
+
+    &::before {
+      background-color: $brand-blue;
+      left: 0;
+      right: 50%;
+    }
+
+    &::after {
+      background-color: white;      
+      left: 50%;
+      right: 0;
+    }
+
+    &-item {
+      background-color: $brand-blue;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: center;
+      min-height: 100%;
+      padding: 3rem;
+      z-index: 1;
+
+      &__title {
+        color: $brand-yellow;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+      }
+
+      &__table {
+        margin: 0;
+        padding: 0;
+
+        tr {
+
+          td {
+            color: $mid-gray;
+            vertical-align: top;
+
+            &[scope=row] {
+              color: $brand-blue;
+              font-weight: $font-bold;
+            }
+
+            a {
+              color: $brand-yellow;
+              text-decoration: none;
+            }
+          }
+
+        }
+      }
+
+      &__info {
+        color: $light-gray;
+      }
+
+      &--light {
+        background-color: white;
+      }
+    }
+  }
+
+  &__map {
+    iframe {
+      height: 36rem;
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  &__cta {
+    background-color: white;
+    padding: 5rem 0;
+
+    &__title {
+      color: $brand-blue;
+      margin-bottom: 4rem;
+      text-align: center;
+    }
+
+    &__form {
+      position: relative;
+    
+      &__inputs {
+        margin: 0 -15px 15px -15px;
+        @include clearfix;
+  
+        @include medium {
+          margin-bottom: 0;
+        }
+  
+        &__input {
+          box-sizing: border-box;
+          display: block;
+          float: left;
+          overflow: hidden;
+          padding: 0 15px;
+          width: 50%;
+  
+          @include medium {
+            float: none;
+            margin-bottom: 10px;
+            width: auto;
+          }
+  
+          input {
+            background-color: white;
+            border: 1px solid $mid-gray;
+            color: $dark-gray;
+            font-size: 1em;
+            font-weight: $font-medium;
+            line-height: 30px;
+            outline: none;
+            padding: 10px 15px;
+            transition: all .25s ease-in-out;
+            width: 100%;
+  
+            &.has-error {
+              border-color: rgba($red,.5);
+            }
+  
+            &::-webkit-input-placeholder {
+              color: $mid-gray;
+            }
+  
+            &::-moz-placeholder {
+              color: $mid-gray;
+            }
+  
+            &:-ms-placeholder {
+              color: $mid-gray;
+            }
+  
+            &:-moz-placeholder {
+              color: $mid-gray;
+            }
+  
+            &:focus {
+              border-color: $green;
+            }
+  
+            &:disabled {
+              background-color: $mid-light-gray;
+              color: $mid-gray;
+            }
+          }
+  
+          span {
+            background-color: $red;
+            color: white;
+            display: block;
+            font-size: .6em;
+            font-weight: $font-bold;
+            padding: 2px 5px;
+            text-transform: uppercase;
+          }
+        }
+      }
+  
+      &__message {
+  
+        &-textarea {
+          margin-bottom: 20px;
+  
+          textarea {
+            background-color: white;
+            border: 1px solid $mid-gray;
+            color: $dark-gray;
+            display: block;
+            font-size: 1em;
+            font-weight: $font-medium;
+            margin: 0;
+            outline: none;
+            padding: 15px;
+            resize: none;
+            transition: all .25s ease-in-out;
+            width: 100%;
+  
+            &.has-error {
+              border-color: rgba($red,.5);
+            }
+  
+            &::-webkit-input-placeholder {
+              color: $mid-gray;
+            }
+  
+            &::-moz-placeholder {
+              color: $mid-gray;
+            }
+  
+            &:-ms-placeholder {
+              color: $mid-gray;
+            }
+  
+            &:-moz-placeholder {
+              color: $mid-gray;
+            }
+  
+            &:focus {
+              border-color: $green;
+            }
+  
+            &:disabled {
+              background-color: $mid-light-gray;
+              color: $mid-gray;
+            }
+  
+          }
+  
+          span {
+            background-color: $red;
+            color: white;
+            display: block;
+            font-size: .6em;
+            font-weight: $font-bold;
+            padding: 2px 5px;
+            text-transform: uppercase;
+          }
+        }
+      }
+  
+      &__button {
+        background-color: $green;
+        border: none;
+        color: white;
+        font-size: 1.25em;
+        font-weight: $font-medium;
+        line-height: 60px;
+        outline: none;
+        text-transform: uppercase;
+        transition: all .25s ease-in-out;
+        width: 100%;
+  
+        &:hover {
+          color: white;
+          background-color: $dark-gray;
+        }
+      }
+    }
+  }
+
+
+  .msg-response {
+    border: 1px solid $mid-gray;
+    display: none;
+    margin: 20px 0 0 0;
+    padding: 20px;
+    text-transform: uppercase;
+
+    &.form-error {
+      border-color: rgba(red,.5);
+    }
+
+    &.form-success {
+      border-color: rgba(green,.5);
+    }
+  }
+}

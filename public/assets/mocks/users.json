@@ -1,0 +1,38 @@
+[
+    {
+        "id": 899290,
+        "username": "bishal",
+        "name": "Bishal",
+        "lastname": "Kunwar",
+        "email": "C0899290@mylambton.ca",
+        "password": "123456",
+        "wishlist": []
+    },
+    {
+        "id": 887405,
+        "username": "gourav",
+        "name": "Gourav",
+        "lastname": "Kadariya",
+        "email": "C0887405@mylambton.ca",
+        "password": "123456",
+        "wishlist": []
+    },
+    {
+        "id": 898267,
+        "username": "rodrigo",
+        "name": "Rodrigo",
+        "lastname": "Olave",
+        "email": "C0898267@mylambton.ca",
+        "password": "123456",
+        "wishlist": []
+    },
+    {
+        "id": 899380,
+        "username": "shreejan",
+        "name": "Shreejan",
+        "lastname": "Acharya",
+        "email": "C0899380@mylambton.ca",
+        "password": "123456",
+        "wishlist": []
+    }
+]
