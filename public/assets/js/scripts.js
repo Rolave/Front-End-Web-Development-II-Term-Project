@@ -263,8 +263,16 @@ if (propertiesFilterForm) {
     if (filteredProperties.length > 0) {
       filteredProperties.forEach(function (property) {
         const propertyItem = createPropertyItem(property);
-        propertiesContainer.insertAdjacentHTML('afterbegin', propertyItem);
+        propertiesContainer.insertAdjacentHTML('beforeend', propertyItem);
       });
+    } else {
+      const noMatchesFoundAlert = `
+        <div class="col">
+          <div class="alert alert-warning m-0" role="alert">
+            Sorry! No matches were found, please try a different search.
+          </div>
+        </div>`;
+      propertiesContainer.insertAdjacentHTML('beforeend', noMatchesFoundAlert);
     }
   });
 
